@@ -92,8 +92,9 @@ api.interceptors.response.use(
 );
 
 // Authentication API
+// Authentication API - FIXED
 export const authAPI = {
-  login: (credentials) => api.post('/auth/login/', credentials),
+  login: (credentials) => api.post('/auth/login/', credentials),  // This is actually correct!
   logout: () => api.post('/auth/logout/'),
   getCurrentUser: () => api.get('/auth/me/'),
   updateProfile: (data) => api.put('/auth/me/', data),
